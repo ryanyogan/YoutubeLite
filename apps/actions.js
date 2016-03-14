@@ -1,6 +1,6 @@
 'use strict';
 
-const youtubeApiKey = '';
+const youtubeApiKey = 'AIzaSyDq8uAe4We7s9TFKip9VAR9SN7yl-zy5U0';
 const youtubeApiBaseUrl = 'https://www.googleapis.com/youtube/v3';
 
 export const SET_SEARCH_KEYWORD = 'SET_SEARCH_KEYWORD';
