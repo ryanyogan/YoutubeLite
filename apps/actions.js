@@ -16,6 +16,8 @@ export const runSearch = (keyword) => (dispatch) => _searchVideos(dispatch, keyw
 export const moreVideos = (keyword, nextPageToken) => (dispatch) => _searchVideos(dispatch, keyword, nextPageToken);
 
 const _searchVideos = (dispatch, keyword, nextPageToken = null) => {
+  dispatch(_searchStarted(keyword));
+
   const encodedKeyword = keyword.replace(' ', '+');
   let url = `${youtubeApiBaseUrl}/search?part=snippet&q=${encodedKeyword}&type=video&maxResults=10&key=${youtubeApiKey}`;
   if (nextPageToken) {
