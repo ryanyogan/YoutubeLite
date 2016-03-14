@@ -36,7 +36,8 @@ class SearchResult extends Component {
           <View style={styles.rowWrapper}>
             <Image
               style={styles.thumbnail}
-              source={{uri: rowData.snippet.thumbnail.default.url}} />
+              source={{uri: rowData.snippet.thumbnails.default.url}} />
+            <Text style={styles.title}>{rowData.snippet.title}</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -44,7 +45,7 @@ class SearchResult extends Component {
   }
 
   handleMore() {
-    this.props.moreVideos(this.props.keyword, this.props.results.nextPageToken);
+    this.props.moreVideos(this.props.keyword, this.props.result.nextPageToken);
   }
 
   render() {
